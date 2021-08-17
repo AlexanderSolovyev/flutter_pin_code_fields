@@ -284,7 +284,7 @@ class _PinCodeFieldsState extends State<PinCodeFields> {
   }
 
   /// Setting the background color of the active text field using _selectedIndex.
-  Color _getBackgroundColorFromIndex(int index) {
+  Color? _getBackgroundColorFromIndex(int index) {
     if (!widget.enabled) {
       return widget.fieldBackgroundColor!;
     }
@@ -295,7 +295,7 @@ class _PinCodeFieldsState extends State<PinCodeFields> {
     } else if (_selectedIndex > index) {
       return widget.fieldBackgroundColor!;
     }
-    return widget.fieldBackgroundColor!;
+    return widget.fieldBackgroundColor;
   }
 
   /// Generating border of the field by using enum FieldBorderStyle.
