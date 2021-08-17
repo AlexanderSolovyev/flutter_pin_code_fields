@@ -1,6 +1,6 @@
 library flutter_pin_code_fields;
 
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 
 class PinCodeFields extends StatefulWidget {
@@ -109,13 +109,13 @@ class PinCodeFields extends StatefulWidget {
     this.borderWidth = 2.0,
 
     /// Default border color is grey.
-    this.borderColor = Colors.grey,
+    this.borderColor = CupertinoColors.systemGrey,
     this.fieldHeight,
     this.fieldWidth,
     this.borderRadius,
 
     /// Default active border color is blue.
-    this.activeBorderColor = Colors.blue,
+    this.activeBorderColor = CupertinoColors.activeBlue,
     this.fieldBackgroundColor,
     this.activeBackgroundColor,
     this.focusNode,
@@ -521,7 +521,7 @@ class _PinCodeFieldsState extends State<PinCodeFields> {
             padding: const EdgeInsets.only(bottom: 4.0),
             child: AbsorbPointer(
               absorbing: true,
-              child: TextField(
+              child: CupertinoTextField(
                 controller: _textEditingController,
                 focusNode: _focusNode,
                 enabled: widget.enabled,
@@ -530,14 +530,14 @@ class _PinCodeFieldsState extends State<PinCodeFields> {
                 keyboardType: widget.keyboardType,
                 enableInteractiveSelection: false,
                 showCursor: false,
-                cursorColor: Colors.blue,
+                cursorColor: CupertinoColors.activeBlue,
                 cursorWidth: 0.01,
-                decoration: InputDecoration(
+                /* decoration: InputDecoration(
                   contentPadding: const EdgeInsets.all(0),
                   border: InputBorder.none,
-                ),
+                ), */
                 style: TextStyle(
-                  color: Colors.red,
+                  color: CupertinoColors.activeOrange,
                   height: 0.01,
                   fontSize: 0.01,
                 ),
