@@ -286,14 +286,14 @@ class _PinCodeFieldsState extends State<PinCodeFields> {
   /// Setting the background color of the active text field using _selectedIndex.
   Color? _getBackgroundColorFromIndex(int index) {
     if (!widget.enabled) {
-      return widget.fieldBackgroundColor!;
+      return widget.fieldBackgroundColor;
     }
     if (((_selectedIndex == index) ||
             (_selectedIndex == index + 1 && index + 1 == widget.length)) &&
         _focusNode!.hasFocus) {
-      return widget.activeBackgroundColor!;
+      return widget.activeBackgroundColor;
     } else if (_selectedIndex > index) {
-      return widget.fieldBackgroundColor!;
+      return widget.fieldBackgroundColor;
     }
     return widget.fieldBackgroundColor;
   }
